@@ -1,0 +1,50 @@
+2026-09-29 20:37:30,207 — experiments.precompute_analytic — INFO — Loading models...
+2026-09-29 20:37:30,207 — experiments.loader — INFO — Sweeping experiments/models/ for pretrained models...
+2026-09-29 20:37:30,210 — experiments.loader — INFO — Loading banknote_authentication__logistic.joblib
+2026-09-29 20:37:30,286 — experiments.loader — INFO — Loading physicochemical_protein__linear.joblib
+2026-09-29 20:37:30,298 — experiments.loader — INFO — Loading breast_cancer_wisconsin__logistic.joblib
+2026-09-29 20:37:30,302 — experiments.loader — INFO — Loading cpu_act__linear.joblib
+2026-09-29 20:37:30,307 — experiments.loader — INFO — Loading buzz_toms_hardware__linear.joblib
+2026-09-29 20:37:30,340 — experiments.loader — INFO — Loading parkinsons__logistic.joblib
+2026-09-29 20:37:30,343 — experiments.loader — INFO — Loading superconductivity__linear.joblib
+2026-09-29 20:37:30,382 — experiments.loader — INFO — Loading vehicle_norm__logistic.joblib
+2026-09-29 20:37:30,669 — experiments.loader — INFO — Loading kin8nm__linear.joblib
+2026-09-29 20:37:30,674 — experiments.loader — INFO — Loading spambase__logistic.joblib
+2026-09-29 20:37:30,680 — experiments.loader — INFO — Loading pm10__logistic.joblib
+2026-09-29 20:37:30,699 — experiments.loader — INFO — Loading elevators__linear.joblib
+2026-09-29 20:37:30,704 — experiments.loader — INFO — Successfully reconstructed 12 total artifacts.
+2026-09-29 20:37:30,704 — experiments.precompute_analytic — INFO — Loaded 12 artifacts.
+2026-09-29 20:37:30,704 — experiments.precompute_analytic — INFO — Computing query points at test set...
+2026-09-29 20:37:30,718 — experiments.precompute_analytic — INFO — Loaded existing solutions with 1440 entries.
+2026-09-29 20:37:30,718 — experiments.precompute_analytic — INFO — Force-recompute for model(s): {'logistic'}
+2026-09-29 20:37:30,718 — experiments.precompute_analytic — INFO — Dropped 720 cached entries for model(s).
+2026-09-29 20:37:30,718 — experiments.precompute_analytic — INFO — Processing artifact: banknote_authentication / logistic
+2026-09-29 20:37:30,718 — experiments.precompute_analytic — INFO — Processing artifact: physicochemical_protein / linear
+2026-09-29 20:37:30,719 — experiments.precompute_analytic — INFO — Processing artifact: breast_cancer_wisconsin / logistic
+2026-09-29 20:37:30,719 — experiments.precompute_analytic — INFO — Processing artifact: cpu_act / linear
+2026-09-29 20:37:30,719 — experiments.precompute_analytic — INFO — Processing artifact: buzz_toms_hardware / linear
+2026-09-29 20:37:30,719 — experiments.precompute_analytic — INFO — Processing artifact: parkinsons / logistic
+2026-09-29 20:37:30,719 — experiments.precompute_analytic — INFO — Processing artifact: superconductivity / linear
+2026-09-29 20:37:30,719 — experiments.precompute_analytic — INFO — Processing artifact: vehicle_norm / logistic
+2026-09-29 20:37:30,719 — experiments.precompute_analytic — INFO — Processing artifact: kin8nm / linear
+2026-09-29 20:37:30,719 — experiments.precompute_analytic — INFO — Processing artifact: spambase / logistic
+2026-09-29 20:37:30,720 — experiments.precompute_analytic — INFO — Processing artifact: pm10 / logistic
+2026-09-29 20:37:30,720 — experiments.precompute_analytic — INFO — Processing artifact: elevators / linear
+2026-09-29 20:37:30,720 — experiments.precompute_analytic — INFO — Prepared 720 tasks for precomputation. Executing with 5 workers...
+2026-09-29 20:38:54,240 — experiments.precompute_analytic — INFO — Progress: 50 / 720 tasks completed.
+2026-09-29 20:40:38,335 — experiments.precompute_analytic — INFO — Progress: 100 / 720 tasks completed.
+2026-09-29 20:42:28,126 — experiments.precompute_analytic — INFO — Progress: 150 / 720 tasks completed.
+2026-09-29 20:44:43,747 — experiments.precompute_analytic — INFO — Progress: 200 / 720 tasks completed.
+2026-09-29 20:47:12,645 — experiments.precompute_analytic — INFO — Progress: 250 / 720 tasks completed.
+2026-09-29 20:49:25,738 — experiments.precompute_analytic — INFO — Progress: 300 / 720 tasks completed.
+2026-09-29 20:51:48,752 — experiments.precompute_analytic — INFO — Progress: 350 / 720 tasks completed.
+2026-09-29 20:55:58,665 — experiments.precompute_analytic — INFO — Progress: 400 / 720 tasks completed.
+2026-09-29 21:00:31,107 — experiments.precompute_analytic — INFO — Progress: 450 / 720 tasks completed.
+2026-09-29 21:04:06,508 — experiments.precompute_analytic — INFO — Progress: 500 / 720 tasks completed.
+2026-09-29 21:07:02,588 — experiments.precompute_analytic — INFO — Progress: 550 / 720 tasks completed.
+2026-09-29 21:10:14,647 — experiments.precompute_analytic — INFO — Progress: 600 / 720 tasks completed.
+2026-09-29 21:12:12,346 — experiments.precompute_analytic — INFO — Progress: 650 / 720 tasks completed.
+2026-09-29 21:14:03,623 — experiments.precompute_analytic — INFO — Progress: 700 / 720 tasks completed.
+2026-09-29 21:14:49,482 — experiments.precompute_analytic — INFO — Progress: 720 / 720 tasks completed.
+2026-09-29 21:14:49,498 — experiments.precompute_analytic — INFO — Precomputation finished in 2238.73s. Computed 720 solutions.
+2026-09-29 21:14:49,514 — experiments.precompute_analytic — INFO — Analytic solutions saved successfully.

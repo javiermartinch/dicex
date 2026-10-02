@@ -1,0 +1,93 @@
+# =============================================================================
+# CI — quality checks and tests on every push to main and every pull request
+# =============================================================================
+#
+# - quality: ruff (lint + format), pyright (strict), cargo fmt and clippy
+# - test:    builds the package from source (Rust extension included) and runs
+#            the test suite with coverage on Linux, macOS and Windows for
+#            Python 3.12 and 3.13, and uploads the coverage report to Codecov
+# - paper:   regenerates the paper figures and tables from the included results
+#            (the quick check of experiments/README.md)
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The toolchain pinned in rust-toolchain.toml (with rustfmt and clippy) is
+      # installed automatically by rustup on first use.
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - name: Install the project
+        run: uv sync --dev --locked
+      - name: Ruff (lint)
+        run: uv run ruff check .
+      - name: Ruff (format)
+        run: uv run ruff format --check .
+      - name: Pyright (strict)
+        run: uv run pyright
+      - name: Cargo fmt
+        run: cargo fmt --check
+      - name: Cargo clippy
+        run: cargo clippy -- -D warnings
+
+  test:
+    name: Test ${{ matrix.os }} / Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install the project
+        run: uv sync --dev --locked
+      - name: Run the tests
+        run: uv run pytest --cov --cov-report=xml
+      # Coverage badge: one upload per run is enough. It never fails the CI.
+      - name: Upload coverage to Codecov
+        if: matrix.os == 'ubuntu-latest' && matrix.python == '3.13'
+        uses: codecov/codecov-action@v5
+        with:
+          files: coverage.xml
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: false
+
+  paper:
+    name: Paper figures (quick check)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.13"
+      - name: Install the experiments environment
+        working-directory: experiments
+        run: uv sync --locked
+      - name: Regenerate figures and tables from the included results
+        working-directory: experiments
+        run: ./run_all.sh example figures
+      - uses: actions/upload-artifact@v4
+        with:
+          name: paper-figures
+          path: experiments/paper_figures/

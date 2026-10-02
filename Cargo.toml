@@ -1,0 +1,17 @@
+[package]
+name = "dicex_rust"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "_rust_ext"
+crate-type = ["cdylib"]
+path = "rust/src/lib.rs"
+
+[dependencies]
+pyo3 = { version = "0.22", features = ["abi3-py312"] }
+numpy = "0.22"
+ndarray = "0.15"
+rayon = "1.10"
+rand = "0.8"
+rand_pcg = "0.3"

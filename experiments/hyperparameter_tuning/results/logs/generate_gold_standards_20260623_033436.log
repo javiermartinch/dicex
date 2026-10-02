@@ -1,0 +1,130 @@
+2026-06-23 03:34:36,521 — experiments.generate_gold_standards — INFO — Starting gold-standards generation (seed=20260530)
+2026-06-23 03:34:36,521 — experiments.loader — INFO — Sweeping experiments/models/ for pretrained models...
+2026-06-23 03:34:36,525 — experiments.loader — INFO — Loading physicochemical_protein__random_forest.joblib
+2026-06-23 03:34:36,738 — experiments.loader — INFO — Loading sulfur__xgboost.joblib
+2026-06-23 03:34:36,751 — experiments.loader — INFO — Loading vehicle_norm__xgboost.joblib
+2026-06-23 03:34:37,038 — experiments.loader — INFO — Loading banknote_authentication__logistic.joblib
+2026-06-23 03:34:37,040 — experiments.loader — INFO — Loading buzz_toms_hardware__random_forest.joblib
+2026-06-23 03:34:37,136 — experiments.loader — INFO — Loading buzz_toms_hardware__xgboost.joblib
+2026-06-23 03:34:37,164 — experiments.loader — INFO — Loading vehicle_norm__random_forest.joblib
+2026-06-23 03:34:37,470 — experiments.loader — INFO — Loading superconductivity__mlp.joblib
+2026-06-23 03:34:37,508 — experiments.loader — INFO — Loading physicochemical_protein__linear.joblib
+2026-06-23 03:34:37,518 — experiments.loader — INFO — Loading sonar__xgboost.joblib
+2026-06-23 03:34:37,520 — experiments.loader — INFO — Loading eeg-eye-state__logistic.joblib
+2026-06-23 03:34:37,527 — experiments.loader — INFO — Loading blood_transfusion__xgboost.joblib
+2026-06-23 03:34:37,528 — experiments.loader — INFO — Loading banknote_authentication__xgboost.joblib
+2026-06-23 03:34:37,529 — experiments.loader — INFO — Loading blood_transfusion__logistic.joblib
+2026-06-23 03:34:37,530 — experiments.loader — INFO — Loading eeg-eye-state__mlp.joblib
+2026-06-23 03:34:37,537 — experiments.loader — INFO — Loading spambase__mlp.joblib
+2026-06-23 03:34:37,541 — experiments.loader — INFO — Loading tecator__mlp.joblib
+2026-06-23 03:34:37,543 — experiments.loader — INFO — Loading superconductivity__xgboost.joblib
+2026-06-23 03:34:37,579 — experiments.loader — INFO — Loading tecator__linear.joblib
+2026-06-23 03:34:37,581 — experiments.loader — INFO — Loading kin8nm__mlp.joblib
+2026-06-23 03:34:37,583 — experiments.loader — INFO — Loading parkinsons__mlp.joblib
+2026-06-23 03:34:37,584 — experiments.loader — INFO — Loading sulfur__random_forest.joblib
+2026-06-23 03:34:37,609 — experiments.loader — INFO — Loading breast_cancer_wisconsin__logistic.joblib
+2026-06-23 03:34:37,610 — experiments.loader — INFO — Loading ailerons__random_forest.joblib
+2026-06-23 03:34:37,632 — experiments.loader — INFO — Loading buzz_toms_hardware__mlp.joblib
+2026-06-23 03:34:37,662 — experiments.loader — INFO — Loading breast_cancer_wisconsin__mlp.joblib
+2026-06-23 03:34:37,663 — experiments.loader — INFO — Loading ailerons__xgboost.joblib
+2026-06-23 03:34:37,669 — experiments.loader — INFO — Loading kin8nm__random_forest.joblib
+2026-06-23 03:34:37,692 — experiments.loader — INFO — Loading eeg-eye-state__xgboost.joblib
+2026-06-23 03:34:37,699 — experiments.loader — INFO — Loading sonar__mlp.joblib
+2026-06-23 03:34:37,701 — experiments.loader — INFO — Loading banknote_authentication__mlp.joblib
+2026-06-23 03:34:37,702 — experiments.loader — INFO — Loading blood_transfusion__random_forest.joblib
+2026-06-23 03:34:37,709 — experiments.loader — INFO — Loading spambase__xgboost.joblib
+2026-06-23 03:34:37,713 — experiments.loader — INFO — Loading cpu_act__linear.joblib
+2026-06-23 03:34:37,716 — experiments.loader — INFO — Loading eeg-eye-state__random_forest.joblib
+2026-06-23 03:34:37,732 — experiments.loader — INFO — Loading parkinsons__random_forest.joblib
+2026-06-23 03:34:37,738 — experiments.loader — INFO — Loading buzz_toms_hardware__linear.joblib
+2026-06-23 03:34:37,765 — experiments.loader — INFO — Loading parkinsons__logistic.joblib
+2026-06-23 03:34:37,766 — experiments.loader — INFO — Loading vehicle_norm__mlp.joblib
+2026-06-23 03:34:38,048 — experiments.loader — INFO — Loading superconductivity__linear.joblib
+2026-06-23 03:34:38,084 — experiments.loader — INFO — Loading cpu_act__mlp.joblib
+2026-06-23 03:34:38,087 — experiments.loader — INFO — Loading pm10__random_forest.joblib
+2026-06-23 03:34:38,094 — experiments.loader — INFO — Loading ailerons__mlp.joblib
+2026-06-23 03:34:38,099 — experiments.loader — INFO — Loading tecator__random_forest.joblib
+2026-06-23 03:34:38,105 — experiments.loader — INFO — Loading sulfur__mlp.joblib
+2026-06-23 03:34:38,108 — experiments.loader — INFO — Loading physicochemical_protein__mlp.joblib
+2026-06-23 03:34:38,119 — experiments.loader — INFO — Loading sonar__logistic.joblib
+2026-06-23 03:34:38,120 — experiments.loader — INFO — Loading pm10__mlp.joblib
+2026-06-23 03:34:38,121 — experiments.loader — INFO — Loading cpu_act__random_forest.joblib
+2026-06-23 03:34:38,136 — experiments.loader — INFO — Loading physicochemical_protein__xgboost.joblib
+2026-06-23 03:34:38,147 — experiments.loader — INFO — Loading breast_cancer_wisconsin__xgboost.joblib
+2026-06-23 03:34:38,149 — experiments.loader — INFO — Loading sulfur__linear.joblib
+2026-06-23 03:34:38,150 — experiments.loader — INFO — Loading elevators__xgboost.joblib
+2026-06-23 03:34:38,154 — experiments.loader — INFO — Loading elevators__random_forest.joblib
+2026-06-23 03:34:38,184 — experiments.loader — INFO — Loading tecator__xgboost.joblib
+2026-06-23 03:34:38,186 — experiments.loader — INFO — Loading elevators__mlp.joblib
+2026-06-23 03:34:38,189 — experiments.loader — INFO — Loading cpu_act__xgboost.joblib
+2026-06-23 03:34:38,193 — experiments.loader — INFO — Loading spambase__random_forest.joblib
+2026-06-23 03:34:38,203 — experiments.loader — INFO — Loading sonar__random_forest.joblib
+2026-06-23 03:34:38,209 — experiments.loader — INFO — Loading pm10__xgboost.joblib
+2026-06-23 03:34:38,210 — experiments.loader — INFO — Loading kin8nm__xgboost.joblib
+2026-06-23 03:34:38,212 — experiments.loader — INFO — Loading vehicle_norm__logistic.joblib
+2026-06-23 03:34:38,493 — experiments.loader — INFO — Loading breast_cancer_wisconsin__random_forest.joblib
+2026-06-23 03:34:38,499 — experiments.loader — INFO — Loading kin8nm__linear.joblib
+2026-06-23 03:34:38,501 — experiments.loader — INFO — Loading parkinsons__xgboost.joblib
+2026-06-23 03:34:38,502 — experiments.loader — INFO — Loading blood_transfusion__mlp.joblib
+2026-06-23 03:34:38,503 — experiments.loader — INFO — Loading superconductivity__random_forest.joblib
+2026-06-23 03:34:38,575 — experiments.loader — INFO — Loading ailerons__linear.joblib
+2026-06-23 03:34:38,580 — experiments.loader — INFO — Loading spambase__logistic.joblib
+2026-06-23 03:34:38,584 — experiments.loader — INFO — Loading pm10__logistic.joblib
+2026-06-23 03:34:38,584 — experiments.loader — INFO — Loading elevators__linear.joblib
+2026-06-23 03:34:38,588 — experiments.loader — INFO — Loading banknote_authentication__random_forest.joblib
+2026-06-23 03:34:38,595 — experiments.loader — INFO — Loading AutoGluon model for tecator
+2026-06-23 03:34:38,730 — experiments.loader — INFO — Loading AutoGluon model for eeg-eye-state
+2026-06-23 03:34:38,803 — experiments.loader — INFO — Loading AutoGluon model for blood_transfusion
+2026-06-23 03:34:38,869 — experiments.loader — INFO — Loading AutoGluon model for banknote_authentication
+2026-06-23 03:34:38,934 — experiments.loader — INFO — Loading AutoGluon model for kin8nm
+2026-06-23 03:34:39,001 — experiments.loader — INFO — Loading AutoGluon model for breast_cancer_wisconsin
+2026-06-23 03:34:39,067 — experiments.loader — INFO — Loading AutoGluon model for buzz_toms_hardware
+2026-06-23 03:34:39,159 — experiments.loader — INFO — Loading AutoGluon model for elevators
+2026-06-23 03:34:39,229 — experiments.loader — INFO — Loading AutoGluon model for sonar
+2026-06-23 03:34:39,295 — experiments.loader — INFO — Loading AutoGluon model for spambase
+2026-06-23 03:34:39,364 — experiments.loader — INFO — Loading AutoGluon model for superconductivity
+2026-06-23 03:34:39,465 — experiments.loader — INFO — Loading AutoGluon model for ailerons
+2026-06-23 03:34:39,536 — experiments.loader — INFO — Loading AutoGluon model for parkinsons
+2026-06-23 03:34:39,602 — experiments.loader — INFO — Loading AutoGluon model for physicochemical_protein
+2026-06-23 03:34:39,677 — experiments.loader — INFO — Loading AutoGluon model for cpu_act
+2026-06-23 03:34:39,745 — experiments.loader — INFO — Loading AutoGluon model for sulfur
+2026-06-23 03:34:39,813 — experiments.loader — INFO — Successfully reconstructed 88 total artifacts.
+2026-06-23 03:34:40,176 — experiments.generate_gold_standards — INFO — Found existing gold records file with matching seed (64 records). Resuming...
+2026-06-23 03:34:40,176 — experiments.generate_gold_standards — INFO — Starting gold-standard generation for 16 model artifact(s) (seed=20260530, workers=8)...
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'vehicle_norm__xgboost' (bucket: high, 100 features, 1 query points)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'buzz_toms_hardware__random_forest' (bucket: high, 96 features, 1 query points)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'buzz_toms_hardware__xgboost' (bucket: high, 96 features, 1 query points)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'vehicle_norm__random_forest' (bucket: high, 100 features, 1 query points)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'superconductivity__mlp' (bucket: high, 81 features, 1 query points)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'spambase__mlp' (bucket: high, 57 features, 1 query points)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'superconductivity__xgboost' (bucket: high, 81 features, 1 query points)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'buzz_toms_hardware__mlp' (bucket: high, 96 features, 1 query points)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'spambase__xgboost' (bucket: high, 57 features, 1 query points)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'buzz_toms_hardware__linear' (bucket: high, 96 features, 1 query points)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'vehicle_norm__mlp' (bucket: high, 100 features, 1 query points)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'superconductivity__linear' (bucket: high, 81 features, 1 query points)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,181 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'spambase__random_forest' (bucket: high, 57 features, 1 query points)
+2026-06-23 03:34:40,182 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'vehicle_norm__logistic' (bucket: high, 100 features, 1 query points)
+2026-06-23 03:34:40,182 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,182 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,182 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,182 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,182 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'superconductivity__random_forest' (bucket: high, 81 features, 1 query points)
+2026-06-23 03:34:40,182 — experiments.generate_gold_standards — INFO — Preparing tasks for artifact 'spambase__logistic' (bucket: high, 57 features, 1 query points)
+2026-06-23 03:34:40,182 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,182 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,182 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,182 — experiments.generate_gold_standards — INFO —   [analytic_cache] query: p50 | noise: mu=0.25 (Retrieved from analytic_solutions.pkl)
+2026-06-23 03:34:40,182 — experiments.generate_gold_standards — INFO — Running 48 tasks with 8 worker processes...
+2026-06-23 04:34:54,807 — experiments.generate_gold_standards — INFO — Successfully generated 64 gold records.
+2026-06-23 04:34:54,812 — experiments.generate_gold_standards — INFO — Persisting 64 gold records to experiments/hyperparameter_tuning/results/gold_standards/gold_standards.pkl
+2026-06-23 04:34:54,812 — experiments.generate_gold_standards — INFO — Done persisting gold records.
+2026-06-23 04:34:54,812 — experiments.generate_gold_standards — INFO — Saved 64 gold-standard records to experiments/hyperparameter_tuning/results/gold_standards/gold_standards.pkl.

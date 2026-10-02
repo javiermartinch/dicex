@@ -1,0 +1,159 @@
+# =============================================================================
+# MkDocs Material — Documentation Site Configuration
+# Build: uv run mkdocs build | Serve: uv run mkdocs serve
+# =============================================================================
+
+site_name: "DiCEx"
+site_url: "https://javiermartinch.github.io/dicex"
+site_description: "Directional counterfactual explanations: robust directions of change under uncertain execution"
+site_author: "Javier Martín-Chávez"
+
+repo_name: "javiermartinch/dicex"
+repo_url: "https://github.com/javiermartinch/dicex"
+edit_uri: "edit/main/docs/"
+
+# ---------------------------------------------------------------------------
+# Theme
+# ---------------------------------------------------------------------------
+
+theme:
+  name: material
+
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  features:
+    - navigation.instant          # SPA-like navigation (no full page reloads)
+    - navigation.instant.progress # Loading progress bar
+    - navigation.tracking         # URL updates to current anchor
+    - navigation.tabs             # Top-level sections as tabs
+    - navigation.sections         # Expandable sections in sidebar
+    - navigation.top              # Back-to-top button
+    - navigation.footer           # Previous/Next links in footer
+    - search.suggest              # Search suggestions
+    - search.highlight            # Highlight search terms on page
+    - content.code.copy           # Copy button on code blocks
+    - content.code.annotate       # Code annotations
+    - content.tabs.link           # Linked content tabs
+    - toc.follow                  # TOC follows scroll position
+
+  icon:
+    repo: fontawesome/brands/github
+
+# ---------------------------------------------------------------------------
+# Navigation
+# ---------------------------------------------------------------------------
+
+nav:
+  - Home: index.md
+  - Quick Start: quick-start.md
+  - Reproducing the paper: reproducing.md
+  - API Reference:
+      - Overview: api/index.md
+      - Explainer: api/explainer.md
+      - Perturbations: api/perturbations.md
+      - Exact Solutions: api/analytical.md
+      - Preprocessing: api/preprocessing.md
+      - Optimizer: api/optimizer.md
+      - Exceptions: api/exceptions.md
+  - Citation: citation.md
+
+# ---------------------------------------------------------------------------
+# Plugins
+# ---------------------------------------------------------------------------
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: ["src"]
+          options:
+            show_source: true
+            show_root_heading: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            docstring_style: google
+            merge_init_into_class: true
+            show_if_no_docstring: false
+
+# ---------------------------------------------------------------------------
+# Markdown Extensions
+# ---------------------------------------------------------------------------
+
+markdown_extensions:
+  # Python Markdown (stdlib)
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # PyMdown Extensions (bundled with Material)
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# ---------------------------------------------------------------------------
+# Extra
+# ---------------------------------------------------------------------------
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/javiermartinch/dicex
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/p/dicex
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

@@ -1,0 +1,222 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+# ---------------------------------------------------------------------------
+# Project Metadata (PEP 621)
+# ---------------------------------------------------------------------------
+
+[project]
+name = "dicex"
+version = "0.1.0"
+description = "Directional counterfactual explanations: robust directions of change under uncertain execution (lower-tail CVaR)"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+authors = [
+    { name = "Javier Martín-Chávez", email = "jmartin16@us.es" },
+]
+keywords = [
+    "counterfactual explanations",
+    "algorithmic recourse",
+    "explainable AI",
+    "CVaR",
+    "risk-averse optimization",
+    "derivative-free optimization",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Rust",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Typing :: Typed",
+]
+dependencies = [
+    "numpy>=2.0.0",
+    "scipy>=1.10.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/javiermartinch/dicex"
+Repository = "https://github.com/javiermartinch/dicex"
+Changelog = "https://github.com/javiermartinch/dicex/releases"
+Documentation = "https://javiermartinch.github.io/dicex"
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "dicex._rust_ext"
+python-source = "src"
+# The experiments of the paper are in the repository but not in the source distribution.
+exclude = [{ path = "experiments/**/*", format = "sdist" }]
+
+# ---------------------------------------------------------------------------
+# Dependency Groups (PEP 735) — managed by uv
+# ---------------------------------------------------------------------------
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=6.0",
+    "pyright>=1.1.400",
+    "ruff>=0.11",
+    "pre-commit>=4.0",
+    "scikit-learn>=1.4.0",
+]
+docs = [
+    "mkdocs>=1.6,<2",  # MkDocs 2.0 drops the plugin system used here
+    "mkdocs-material>=9.6,<10",
+    "mkdocs-minify-plugin>=0.8",
+    "mkdocstrings[python]>=0.27",
+]
+# ---------------------------------------------------------------------------
+# Ruff — linter and formatter
+# ---------------------------------------------------------------------------
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+# All rules enabled; conflicting or unsuitable rules are disabled below
+select = ["ALL"]
+ignore = [
+    # ── Formatter conflicts ──────────────────────────────────────────────────
+    "COM812",   # Missing trailing comma — handled by ruff format
+    "ISC001",   # Implicit string concatenation on single line — formatter conflict
+
+    # ── Docstring mutual exclusions (Google convention) ──────────────────────
+    "D203",     # Blank line before class docstring — conflicts with D211
+    "D213",     # Multi-line summary on second line — conflicts with D212
+
+    # ── Docstring noise (acceptable to omit in modules / packages / __init__)─
+    "D100",     # Missing docstring in public module
+    "D104",     # Missing docstring in public package
+    "D107",     # Missing docstring in __init__
+
+    # ── Too opinionated for a general template ───────────────────────────────
+    "CPY001",   # Missing copyright notice (requires per-project config)
+    "TD003",    # Missing issue link on TODO comments
+    "FIX002",   # Line contains TODO
+
+    # ── Subprocess security — overly broad; validate at review time ──────────
+    "S603",     # subprocess call — check for untrusted input
+    "S607",     # Starting process with partial executable path
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+    "S101",     # Allow assert in tests
+    "PLR2004",  # Allow magic values in tests
+    "ANN",      # Don't require type annotations in tests
+    "D",        # Don't require docstrings in tests
+    "FBT",      # Allow boolean positional args in tests
+    "ARG",      # Allow unused arguments (fixtures)
+    "SLF001",   # Allow private member access in tests
+]
+"experiments/**/*.py" = [
+    "ANN",      # Research scripts are not public library API
+    "C901",     # Visualization and experiment orchestration are intentionally dense
+    "C408",     # Literal-vs-dict style is low value in reproducibility scripts
+    "E501",     # Long plotting strings and labels are acceptable in scripts
+    "FBT003",   # Boolean flags are acceptable in script-only helpers
+    "PTH123",   # Existing script I/O is sufficient; no API surface impact
+    "PLR0912",  # Branch-heavy UI/visualization code is acceptable in scripts
+    "PLR0913",  # Script helpers may need many plotting/experiment parameters
+    "PLR0915",  # Script entrypoints are allowed to be longer
+    "PLR2004",  # Literal constants are common in experiment setup
+    "RUF001",   # Plot labels may use Greek symbols
+    "RUF005",   # Stylistic list construction is low priority in scripts
+    "SIM108",   # Avoid forcing terse ternaries in exploratory code
+    "TRY400",   # Script logging is kept simple
+    "E402",     # Allow sys.path modification before imports in research scripts
+]
+"__init__.py" = [
+    "F401",     # Allow re-exports via unused imports
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pylint]
+max-args = 6
+
+[tool.ruff.lint.isort]
+known-first-party = ["dicex"]
+combine-as-imports = true
+force-sort-within-sections = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.flake8-type-checking]
+strict = true
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+docstring-code-line-length = 80
+
+# ---------------------------------------------------------------------------
+# Pyright — Strict Static Type Checking
+# ---------------------------------------------------------------------------
+
+[tool.pyright]
+include = ["src", "tests"]
+exclude = ["**/__pycache__", "**/.venv"]
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
+# Pragmatic overrides for strict mode
+reportMissingTypeStubs = false
+reportUnnecessaryTypeIgnoreComment = true
+reportMissingModuleSource = false
+
+# ---------------------------------------------------------------------------
+# Pytest
+# ---------------------------------------------------------------------------
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+xfail_strict = true
+filterwarnings = ["error"]
+addopts = ["--strict-markers", "--strict-config", "-ra"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+]
+
+# ---------------------------------------------------------------------------
+# Coverage — enforced threshold
+# ---------------------------------------------------------------------------
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+omit = ["src/dicex/_version.py"]
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
+precision = 2
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "if typing.TYPE_CHECKING:",
+    "@overload",
+    "@typing.overload",
+    "@abstractmethod",
+    "raise NotImplementedError",
+    "\\.\\.\\.",
+]

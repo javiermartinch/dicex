@@ -1,0 +1,132 @@
+# DiCEx optimizer hyperparameters: five presets ordered by computational budget
+# Switch `optimizer.default` to select a different preset (e.g. minimal, mid, xhigh)
+optimizer:
+  default: high
+  presets:
+    # minimal: smallest budget (seconds per run)
+    minimal:
+      angular_schedule_deg:
+        - 85.0
+        - 55.0
+        - 30.0
+      eta: 0.05
+      grid_t_len: 11
+      b_samples: 8
+      n_exploration: 50
+      n_test: 300
+      n_evaluation: 4000
+      n_bootstrap: 300
+    # low: small budget
+    low:
+      angular_schedule_deg:
+        - 85.0
+        - 55.0
+        - 30.0
+        - 15.0
+      eta: 0.05
+      grid_t_len: 21
+      b_samples: 16
+      n_exploration: 200
+      n_test: 800
+      n_evaluation: 7500
+      n_bootstrap: 800
+    # mid: intermediate budget
+    mid:
+      angular_schedule_deg:
+        - 85.0
+        - 55.0
+        - 30.0
+        - 15.0
+        - 5.0
+      eta: 0.05
+      grid_t_len: 31
+      b_samples: 32
+      n_exploration: 500
+      n_test: 1500
+      n_evaluation: 10000
+      n_bootstrap: 1500
+    # high: default preset
+    high:
+      angular_schedule_deg:
+        - 85.0
+        - 55.0
+        - 30.0
+        - 15.0
+        - 5.0
+        - 1.0
+      eta: 0.05
+      grid_t_len: 51
+      b_samples: 64
+      n_exploration: 1000
+      n_test: 2000
+      n_evaluation: 15000
+      n_bootstrap: 2000
+    # xhigh: largest budget, finest angular schedule
+    xhigh:
+      angular_schedule_deg:
+        - 85.0
+        - 70.0
+        - 55.0
+        - 35.0
+        - 20.0
+        - 10.0
+        - 5.0
+        - 1.0
+      eta: 0.05
+      grid_t_len: 201
+      b_samples: 256
+      n_exploration: 3000
+      n_test: 5000
+      n_evaluation: 20000
+      n_bootstrap: 5000
+
+# Experiment grid configuration
+experiment:
+  seed: 20260608
+  n_baseline_random_dirs: 100
+  epsilon: 1.0e-6
+  query_percentiles:
+    - 0.10
+    - 0.50
+    - 0.90
+  alphas:
+    - 0.10
+    - 0.25
+    - 0.50
+    - 0.75
+    - 0.90
+  noise_scenarios:
+    # Axis A: Signal strength
+    - mu: 0.125
+      sigma: 0.25
+      env_std: 0.05
+      label: "weak_signal"
+    - mu: 0.25
+      sigma: 0.25
+      env_std: 0.05
+      label: "balanced"
+    - mu: 0.5
+      sigma: 0.25
+      env_std: 0.05
+      label: "dominant"
+    - mu: 0.75
+      sigma: 0.25
+      env_std: 0.05
+      label: "strong_signal"
+    # Axis B: Noise level
+    - mu: 0.25
+      sigma: 0.01
+      env_std: 0.002
+      label: "near_deterministic"
+    - mu: 0.25
+      sigma: 0.05
+      env_std: 0.01
+      label: "low_noise"
+    - mu: 0.25
+      sigma: 0.10
+      env_std: 0.02
+      label: "moderate_noise"
+    - mu: 0.25
+      sigma: 0.35
+      env_std: 0.07
+      label: "elevated_noise"

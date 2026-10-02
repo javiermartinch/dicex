@@ -1,0 +1,5 @@
+# pyo3 (abi3-py312) needs Python >= 3.12 when cargo is run directly (e.g. the
+# cargo clippy pre-commit hook). Point it at the project environment created by
+# `uv sync`; maturin sets PYO3_PYTHON itself, so wheel builds are unaffected.
+[env]
+PYO3_PYTHON = { value = ".venv/bin/python", relative = true }

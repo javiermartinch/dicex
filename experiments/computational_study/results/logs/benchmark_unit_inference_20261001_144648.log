@@ -1,0 +1,10 @@
+2026-10-01 14:46:48,610 — experiments.computational_study.benchmark_unit_inference — INFO — Benchmarking unit inference for 1000 points across 10 trials...
+2026-10-01 14:46:48,852 — experiments.computational_study.benchmark_unit_inference — INFO —     4 |                            13.141 ± 1.237 ms
+2026-10-01 14:46:49,170 — experiments.computational_study.benchmark_unit_inference — INFO —     8 |                            14.247 ± 1.290 ms
+2026-10-01 14:46:49,583 — experiments.computational_study.benchmark_unit_inference — INFO —    16 |                            15.143 ± 1.352 ms
+2026-10-01 14:46:50,194 — experiments.computational_study.benchmark_unit_inference — INFO —    32 |                            14.253 ± 1.383 ms
+2026-10-01 14:46:51,116 — experiments.computational_study.benchmark_unit_inference — INFO —    64 |                            13.532 ± 1.047 ms
+2026-10-01 14:46:53,151 — experiments.computational_study.benchmark_unit_inference — INFO —   128 |                            14.441 ± 1.587 ms
+2026-10-01 14:46:56,993 — experiments.computational_study.benchmark_unit_inference — INFO —   256 |                            14.296 ± 1.996 ms
+2026-10-01 14:47:04,392 — experiments.computational_study.benchmark_unit_inference — INFO —   512 |                            14.751 ± 1.763 ms
+2026-10-01 14:47:04,405 — experiments.computational_study.benchmark_unit_inference — INFO — Saved benchmark results to experiments/computational_study/results/unit_inference_benchmark.csv

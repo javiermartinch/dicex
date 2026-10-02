@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 5am on monday"]
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["pep621", "uv"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "groupName": "Linting and Formatting Toolchain",
+      "matchPackageNames": ["ruff", "pyright", "pre-commit"]
+    },
+    {
+      "groupName": "Testing",
+      "matchPackageNames": ["pytest", "pytest-cov"]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+# =============================================================================
+# Wheels — build and test prebuilt wheels (abi3, Python >= 3.12)
+# =============================================================================
+#
+# Builds one abi3 wheel per platform with maturin, installs each wheel in a clean
+# environment on that platform, and runs the test suite against the installed
+# package. The wheels and the sdist are kept as workflow artifacts.
+#
+# Publishing to PyPI is prepared but disabled: the `publish` job only runs for a
+# published GitHub release AND when the repository variable PUBLISH_TO_PYPI is
+# set to "true" (Settings > Secrets and variables > Actions > Variables). It uses
+# PyPI trusted publishing (no API token), which must be configured on PyPI first.
+#
+# The workflow runs on demand, on pull requests that touch the build, and on
+# releases. The tests on every push and pull request are in ci.yml.
+
+name: Wheels
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+  pull_request:
+    paths:
+      - "rust/**"
+      - "Cargo.toml"
+      - "Cargo.lock"
+      - "pyproject.toml"
+      - "rust-toolchain.toml"
+      - ".github/workflows/wheels.yml"
+
+concurrency:
+  group: wheels-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build ${{ matrix.platform }}
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { platform: linux-x86_64, runner: ubuntu-latest, target: x86_64, manylinux: auto }
+          - { platform: linux-aarch64, runner: ubuntu-latest, target: aarch64, manylinux: auto }
+          - { platform: macos-arm64, runner: macos-14, target: aarch64 }
+          - { platform: macos-x86_64, runner: macos-15-intel, target: x86_64 }
+          - { platform: windows-x86_64, runner: windows-latest, target: x64 }
+    steps:
+      - uses: actions/checkout@v4
+      # Strip absolute build paths (e.g. /Users/runner/...) from the compiled extension.
+      - name: Remap build paths
+        if: runner.os != 'Windows'
+        shell: bash
+        run: echo "RUSTFLAGS=--remap-path-prefix=$HOME=/home/build --remap-path-prefix=$GITHUB_WORKSPACE=/build" >> "$GITHUB_ENV"
+      - uses: PyO3/maturin-action@v1
+        with:
+          target: ${{ matrix.target }}
+          manylinux: ${{ matrix.manylinux || 'off' }}
+          args: --release --out dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wheel-${{ matrix.platform }}
+          path: dist/*.whl
+          if-no-files-found: error
+
+  test:
+    name: Test ${{ matrix.platform }}
+    needs: build
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { platform: linux-x86_64, runner: ubuntu-latest }
+          - { platform: macos-arm64, runner: macos-14 }
+          - { platform: macos-x86_64, runner: macos-15-intel }
+          - { platform: windows-x86_64, runner: windows-latest }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: wheel-${{ matrix.platform }}
+          path: wheels
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install the wheel in a clean environment
+        shell: bash
+        run: |
+          python -m venv "$RUNNER_TEMP/venv"
+          if [ -d "$RUNNER_TEMP/venv/Scripts" ]; then PY="$RUNNER_TEMP/venv/Scripts/python"; else PY="$RUNNER_TEMP/venv/bin/python"; fi
+          echo "PY=$PY" >> "$GITHUB_ENV"
+          "$PY" -m pip install --upgrade pip
+          "$PY" -m pip install --only-binary dicex --find-links wheels dicex pytest scikit-learn
+      - name: Check that the Rust extension is used
+        shell: bash
+        run: |
+          "$PY" -c "import dicex, dicex.core.cvar as c; print(dicex.__version__); assert c.HAS_RUST_CVAR, 'Rust extension not loaded'"
+      - name: Run the tests against the installed wheel
+        shell: bash
+        # Tests run from a copy outside the checkout so that `src/` is never imported.
+        run: |
+          mkdir "$RUNNER_TEMP/t"
+          cp -r tests pyproject.toml "$RUNNER_TEMP/t/"
+          cd "$RUNNER_TEMP/t"
+          "$PY" -m pytest -q -p no:cacheprovider tests
+
+  test-linux-aarch64:
+    name: Test linux-aarch64 (emulated)
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: wheel-linux-aarch64
+          path: wheels
+      - uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64
+      - name: Install and test under emulation (import, Rust extension, smoke and core tests)
+        run: |
+          docker run --rm --platform linux/arm64 -v "$PWD":/w -w /tmp python:3.13-slim bash -c '
+            set -e
+            cp -r /w/tests /w/pyproject.toml /tmp/
+            pip install -q --only-binary dicex --find-links /w/wheels dicex pytest scikit-learn
+            python -c "import dicex.core.cvar as c; assert c.HAS_RUST_CVAR, \"Rust extension not loaded\""
+            python -m pytest -q -p no:cacheprovider tests/smoke tests/unit/core
+          '
+
+  sdist:
+    name: Build sdist
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: PyO3/maturin-action@v1
+        with:
+          command: sdist
+          args: --out dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sdist
+          path: dist/*.tar.gz
+          if-no-files-found: error
+
+  publish:
+    name: Publish to PyPI
+    needs: [test, test-linux-aarch64, sdist]
+    if: github.event_name == 'release' && vars.PUBLISH_TO_PYPI == 'true'
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist

@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use DiCEx, please cite the paper below."
+title: "DiCEx: Directional Counterfactual Explanations"
+type: software
+license: MIT
+version: 0.1.0
+repository-code: "https://github.com/javiermartinch/dicex"
+keywords:
+  - counterfactual explanations
+  - algorithmic recourse
+  - explainable AI
+  - CVaR
+  - derivative-free optimization
+authors:
+  - family-names: Carrizosa
+    given-names: Emilio
+  - family-names: Martín-Chávez
+    given-names: Javier
+  - family-names: Molero-Río
+    given-names: Cristina
+preferred-citation:
+  type: unpublished
+  title: "Directional Counterfactual Explanations"
+  authors:
+    - family-names: Carrizosa
+      given-names: Emilio
+    - family-names: Martín-Chávez
+      given-names: Javier
+    - family-names: Molero-Río
+      given-names: Cristina
+  year: 2026
+  notes: "Preprint"
+  url: "https://www.researchgate.net/publication/415152503_Directional_Counterfactual_Explanations"

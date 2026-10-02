@@ -1,0 +1,24 @@
+dimension_bucket: high
+selection:
+  trial_number: 13
+  precision_loss: 0.24502617757177297
+  mean_time_seconds: 4.0636078125
+  mean_n_model_evals: 3611820.3125
+  balance_score: 1.0
+optimizer:
+  angular_schedules_deg:
+  - 86.51998680751016
+  - 54.94656239384528
+  - 34.89511302882751
+  - 22.16096622326716
+  - 14.07384534169797
+  b_samples: 250
+  eta: 0.05
+  grid_t_len: 20
+  n_exploration: 500
+  test_multiplier: 2
+  n_test: 1000
+  n_evaluation: 5000
+  n_bootstrap: 2500
+execution:
+  timeout_seconds: 600.0

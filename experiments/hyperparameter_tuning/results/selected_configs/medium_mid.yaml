@@ -1,0 +1,26 @@
+dimension_bucket: medium
+selection:
+  trial_number: 53
+  precision_loss: 0.13103023123972787
+  mean_time_seconds: 2.7876234374999997
+  mean_n_model_evals: 3348825.0
+  balance_score: 0.22086928426939817
+optimizer:
+  angular_schedules_deg:
+  - 88.17192106480415
+  - 64.40804455080291
+  - 47.04894883496125
+  - 34.36843335196716
+  - 25.10553881260973
+  - 18.339156534040193
+  - 13.39643275097142
+  b_samples: 100
+  eta: 0.05
+  grid_t_len: 80
+  n_exploration: 800
+  test_multiplier: 3
+  n_test: 2400
+  n_evaluation: 5000
+  n_bootstrap: 2500
+execution:
+  timeout_seconds: 420.0

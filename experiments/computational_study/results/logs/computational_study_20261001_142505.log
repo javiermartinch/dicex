@@ -1,0 +1,253 @@
+2026-10-01 14:25:05,515 — experiments.computational_study — INFO — Starting model complexity study
+2026-10-01 14:25:05,516 — experiments.computational_study — INFO — Loading California Housing...
+2026-10-01 14:25:05,519 — experiments.computational_study — INFO — Evaluating RandomForest with n_estimators=10
+2026-10-01 14:25:05,549 — experiments.computational_study — INFO —   Fit time: 0.03s
+2026-10-01 14:25:05,551 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:05,551 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:06,567 — dicex.explainer — INFO — Explanation complete: CVaR=0.258367, 2083500 model evals
+2026-10-01 14:25:06,594 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.2584 > 0.0184)
+2026-10-01 14:25:06,594 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:06,594 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:08,303 — dicex.explainer — INFO — Explanation complete: CVaR=0.160694, 3732700 model evals
+2026-10-01 14:25:08,330 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.1607 > -0.0113)
+2026-10-01 14:25:08,330 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:08,330 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:09,651 — dicex.explainer — INFO — Explanation complete: CVaR=-0.014421, 2770900 model evals
+2026-10-01 14:25:09,679 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (-0.0144 > -0.6089)
+2026-10-01 14:25:09,679 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:09,679 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:11,584 — dicex.explainer — INFO — Explanation complete: CVaR=-0.077826, 4281500 model evals
+2026-10-01 14:25:11,612 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (-0.0778 > -0.3792)
+2026-10-01 14:25:11,612 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:11,612 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:12,756 — dicex.explainer — INFO — Explanation complete: CVaR=0.448928, 2357900 model evals
+2026-10-01 14:25:12,783 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.4489 > -0.2043)
+2026-10-01 14:25:12,783 — experiments.computational_study — INFO —   DiCEx Time: 1.45s ± 0.34s
+2026-10-01 14:25:12,784 — experiments.computational_study — INFO —   Predict Time (avg): 1.244s
+2026-10-01 14:25:12,784 — experiments.computational_study — INFO —   Model Evals: 3045300.0, Avg Time per Eval in batch: 0.409 µs
+2026-10-01 14:25:12,784 — experiments.computational_study — INFO — Evaluating RandomForest with n_estimators=50
+2026-10-01 14:25:12,853 — experiments.computational_study — INFO —   Fit time: 0.07s
+2026-10-01 14:25:12,853 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:12,853 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:14,260 — dicex.explainer — INFO — Explanation complete: CVaR=0.354743, 2908800 model evals
+2026-10-01 14:25:14,288 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.3547 > 0.0990)
+2026-10-01 14:25:14,288 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:14,288 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:15,388 — dicex.explainer — INFO — Explanation complete: CVaR=0.199882, 2220700 model evals
+2026-10-01 14:25:15,417 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.1999 > 0.0187)
+2026-10-01 14:25:15,417 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:15,417 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:16,676 — dicex.explainer — INFO — Explanation complete: CVaR=-0.197117, 2497200 model evals
+2026-10-01 14:25:16,704 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (-0.1971 > -0.5599)
+2026-10-01 14:25:16,704 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:16,704 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:18,406 — dicex.explainer — INFO — Explanation complete: CVaR=-0.005022, 3732700 model evals
+2026-10-01 14:25:18,434 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (-0.0050 > -0.2577)
+2026-10-01 14:25:18,435 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:18,435 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:19,687 — dicex.explainer — INFO — Explanation complete: CVaR=0.646181, 2497200 model evals
+2026-10-01 14:25:19,714 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.6462 > -0.1616)
+2026-10-01 14:25:19,714 — experiments.computational_study — INFO —   DiCEx Time: 1.37s ± 0.20s
+2026-10-01 14:25:19,714 — experiments.computational_study — INFO —   Predict Time (avg): 1.207s
+2026-10-01 14:25:19,714 — experiments.computational_study — INFO —   Model Evals: 2771320.0, Avg Time per Eval in batch: 0.435 µs
+2026-10-01 14:25:19,714 — experiments.computational_study — INFO — Evaluating RandomForest with n_estimators=100
+2026-10-01 14:25:19,866 — experiments.computational_study — INFO —   Fit time: 0.15s
+2026-10-01 14:25:19,867 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:19,867 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:21,679 — dicex.explainer — INFO — Explanation complete: CVaR=0.374414, 3320400 model evals
+2026-10-01 14:25:21,706 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.3744 > 0.0822)
+2026-10-01 14:25:21,706 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:21,706 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:22,910 — dicex.explainer — INFO — Explanation complete: CVaR=0.173721, 2358600 model evals
+2026-10-01 14:25:22,935 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.1737 > 0.0194)
+2026-10-01 14:25:22,935 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:22,935 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:24,692 — dicex.explainer — INFO — Explanation complete: CVaR=-0.210327, 3047400 model evals
+2026-10-01 14:25:24,719 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (-0.2103 > -0.5962)
+2026-10-01 14:25:24,720 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:24,720 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:25,984 — dicex.explainer — INFO — Explanation complete: CVaR=-0.048810, 2220700 model evals
+2026-10-01 14:25:26,012 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (-0.0488 > -0.1969)
+2026-10-01 14:25:26,012 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:26,012 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:27,690 — dicex.explainer — INFO — Explanation complete: CVaR=0.601062, 3047400 model evals
+2026-10-01 14:25:27,715 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.6011 > -0.1271)
+2026-10-01 14:25:27,716 — experiments.computational_study — INFO —   DiCEx Time: 1.57s ± 0.26s
+2026-10-01 14:25:27,716 — experiments.computational_study — INFO —   Predict Time (avg): 1.410s
+2026-10-01 14:25:27,716 — experiments.computational_study — INFO —   Model Evals: 2798900.0, Avg Time per Eval in batch: 0.504 µs
+2026-10-01 14:25:27,716 — experiments.computational_study — INFO — Evaluating RandomForest with n_estimators=500
+2026-10-01 14:25:28,394 — experiments.computational_study — INFO —   Fit time: 0.68s
+2026-10-01 14:25:28,395 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:28,395 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:31,247 — dicex.explainer — INFO — Explanation complete: CVaR=0.302661, 2220700 model evals
+2026-10-01 14:25:31,286 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.3027 > 0.0593)
+2026-10-01 14:25:31,286 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:31,286 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:33,821 — dicex.explainer — INFO — Explanation complete: CVaR=0.182404, 2083500 model evals
+2026-10-01 14:25:33,859 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.1824 > 0.0217)
+2026-10-01 14:25:33,859 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:33,859 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:37,246 — dicex.explainer — INFO — Explanation complete: CVaR=-0.199155, 2497200 model evals
+2026-10-01 14:25:37,295 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (-0.1992 > -0.5842)
+2026-10-01 14:25:37,295 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:37,295 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:42,646 — dicex.explainer — INFO — Explanation complete: CVaR=0.060524, 3872700 model evals
+2026-10-01 14:25:42,686 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0605 > -0.1781)
+2026-10-01 14:25:42,686 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:42,686 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:45,511 — dicex.explainer — INFO — Explanation complete: CVaR=0.546551, 2221400 model evals
+2026-10-01 14:25:45,562 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.5466 > -0.1082)
+2026-10-01 14:25:45,562 — experiments.computational_study — INFO —   DiCEx Time: 3.43s ± 1.02s
+2026-10-01 14:25:45,562 — experiments.computational_study — INFO —   Predict Time (avg): 3.290s
+2026-10-01 14:25:45,562 — experiments.computational_study — INFO —   Model Evals: 2579100.0, Avg Time per Eval in batch: 1.276 µs
+2026-10-01 14:25:45,562 — experiments.computational_study — INFO — Evaluating RandomForest with n_estimators=1000
+2026-10-01 14:25:47,031 — experiments.computational_study — INFO —   Fit time: 1.47s
+2026-10-01 14:25:47,032 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:47,032 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:25:54,908 — dicex.explainer — INFO — Explanation complete: CVaR=0.326424, 3320400 model evals
+2026-10-01 14:25:54,996 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.3264 > 0.0590)
+2026-10-01 14:25:54,996 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:25:54,996 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:00,308 — dicex.explainer — INFO — Explanation complete: CVaR=0.182443, 2358600 model evals
+2026-10-01 14:26:00,398 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.1824 > 0.0194)
+2026-10-01 14:26:00,398 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:00,398 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:07,148 — dicex.explainer — INFO — Explanation complete: CVaR=-0.188576, 2772300 model evals
+2026-10-01 14:26:07,225 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (-0.1886 > -0.5646)
+2026-10-01 14:26:07,225 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:07,225 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:14,934 — dicex.explainer — INFO — Explanation complete: CVaR=0.059880, 3046000 model evals
+2026-10-01 14:26:15,013 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0599 > -0.1628)
+2026-10-01 14:26:15,013 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:15,013 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:21,215 — dicex.explainer — INFO — Explanation complete: CVaR=0.544751, 2497200 model evals
+2026-10-01 14:26:21,303 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.5448 > -0.1019)
+2026-10-01 14:26:21,303 — experiments.computational_study — INFO —   DiCEx Time: 6.85s ± 0.95s
+2026-10-01 14:26:21,303 — experiments.computational_study — INFO —   Predict Time (avg): 6.698s
+2026-10-01 14:26:21,303 — experiments.computational_study — INFO —   Model Evals: 2798900.0, Avg Time per Eval in batch: 2.393 µs
+2026-10-01 14:26:21,303 — experiments.computational_study — INFO — Evaluating MLP with hidden_layers=10
+2026-10-01 14:26:21,387 — experiments.computational_study — INFO —   Fit time: 0.08s
+2026-10-01 14:26:21,387 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:21,387 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:21,555 — dicex.explainer — INFO — Explanation complete: CVaR=0.018729, 2359300 model evals
+2026-10-01 14:26:21,556 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0187 > -0.0721)
+2026-10-01 14:26:21,556 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:21,556 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:21,725 — dicex.explainer — INFO — Explanation complete: CVaR=0.018729, 2359300 model evals
+2026-10-01 14:26:21,725 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0187 > -0.0759)
+2026-10-01 14:26:21,725 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:21,725 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:21,897 — dicex.explainer — INFO — Explanation complete: CVaR=0.018729, 2359300 model evals
+2026-10-01 14:26:21,898 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0187 > -0.0749)
+2026-10-01 14:26:21,898 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:21,898 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:22,080 — dicex.explainer — INFO — Explanation complete: CVaR=0.018729, 2359300 model evals
+2026-10-01 14:26:22,080 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0187 > -0.0754)
+2026-10-01 14:26:22,080 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:22,080 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:22,248 — dicex.explainer — INFO — Explanation complete: CVaR=0.018729, 2359300 model evals
+2026-10-01 14:26:22,249 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0187 > -0.0768)
+2026-10-01 14:26:22,249 — experiments.computational_study — INFO —   DiCEx Time: 0.17s ± 0.01s
+2026-10-01 14:26:22,249 — experiments.computational_study — INFO —   Predict Time (avg): 0.034s
+2026-10-01 14:26:22,249 — experiments.computational_study — INFO —   Model Evals: 2359300.0, Avg Time per Eval in batch: 0.015 µs
+2026-10-01 14:26:22,249 — experiments.computational_study — INFO — Evaluating MLP with hidden_layers=50
+2026-10-01 14:26:22,418 — experiments.computational_study — INFO —   Fit time: 0.17s
+2026-10-01 14:26:22,418 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:22,418 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:22,636 — dicex.explainer — INFO — Explanation complete: CVaR=0.050585, 2359300 model evals
+2026-10-01 14:26:22,636 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0506 > -0.0955)
+2026-10-01 14:26:22,636 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:22,636 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:22,854 — dicex.explainer — INFO — Explanation complete: CVaR=0.050585, 2359300 model evals
+2026-10-01 14:26:22,855 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0506 > -0.0956)
+2026-10-01 14:26:22,855 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:22,855 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:23,074 — dicex.explainer — INFO — Explanation complete: CVaR=0.050585, 2359300 model evals
+2026-10-01 14:26:23,075 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0506 > -0.0916)
+2026-10-01 14:26:23,075 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:23,075 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:23,291 — dicex.explainer — INFO — Explanation complete: CVaR=0.050585, 2359300 model evals
+2026-10-01 14:26:23,292 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0506 > -0.0941)
+2026-10-01 14:26:23,292 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:23,292 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:23,512 — dicex.explainer — INFO — Explanation complete: CVaR=0.050585, 2359300 model evals
+2026-10-01 14:26:23,513 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0506 > -0.0940)
+2026-10-01 14:26:23,513 — experiments.computational_study — INFO —   DiCEx Time: 0.22s ± 0.00s
+2026-10-01 14:26:23,513 — experiments.computational_study — INFO —   Predict Time (avg): 0.092s
+2026-10-01 14:26:23,513 — experiments.computational_study — INFO —   Model Evals: 2359300.0, Avg Time per Eval in batch: 0.039 µs
+2026-10-01 14:26:23,513 — experiments.computational_study — INFO — Evaluating MLP with hidden_layers=100
+2026-10-01 14:26:23,644 — experiments.computational_study — INFO —   Fit time: 0.13s
+2026-10-01 14:26:23,644 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:23,644 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:23,981 — dicex.explainer — INFO — Explanation complete: CVaR=0.028059, 2635100 model evals
+2026-10-01 14:26:23,982 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0281 > -0.0629)
+2026-10-01 14:26:23,982 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:23,982 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:24,315 — dicex.explainer — INFO — Explanation complete: CVaR=0.017180, 2634400 model evals
+2026-10-01 14:26:24,316 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0172 > -0.0699)
+2026-10-01 14:26:24,316 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:24,316 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:24,617 — dicex.explainer — INFO — Explanation complete: CVaR=0.025610, 2359300 model evals
+2026-10-01 14:26:24,618 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0256 > -0.0614)
+2026-10-01 14:26:24,618 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:24,618 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:24,944 — dicex.explainer — INFO — Explanation complete: CVaR=0.028059, 2635100 model evals
+2026-10-01 14:26:24,945 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0281 > -0.0630)
+2026-10-01 14:26:24,945 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:24,945 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:25,237 — dicex.explainer — INFO — Explanation complete: CVaR=0.019483, 2358600 model evals
+2026-10-01 14:26:25,238 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0195 > -0.0604)
+2026-10-01 14:26:25,238 — experiments.computational_study — INFO —   DiCEx Time: 0.32s ± 0.02s
+2026-10-01 14:26:25,238 — experiments.computational_study — INFO —   Predict Time (avg): 0.179s
+2026-10-01 14:26:25,238 — experiments.computational_study — INFO —   Model Evals: 2524500.0, Avg Time per Eval in batch: 0.071 µs
+2026-10-01 14:26:25,239 — experiments.computational_study — INFO — Evaluating MLP with hidden_layers=100_50
+2026-10-01 14:26:25,417 — experiments.computational_study — INFO —   Fit time: 0.18s
+2026-10-01 14:26:25,418 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:25,418 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:25,894 — dicex.explainer — INFO — Explanation complete: CVaR=0.049935, 2359300 model evals
+2026-10-01 14:26:25,895 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0499 > -0.0674)
+2026-10-01 14:26:25,895 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:25,895 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:26,375 — dicex.explainer — INFO — Explanation complete: CVaR=0.047368, 2359300 model evals
+2026-10-01 14:26:26,377 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0474 > -0.0663)
+2026-10-01 14:26:26,377 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:26,377 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:26,947 — dicex.explainer — INFO — Explanation complete: CVaR=0.052517, 2770900 model evals
+2026-10-01 14:26:26,948 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0525 > -0.0665)
+2026-10-01 14:26:26,948 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:26,948 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:27,433 — dicex.explainer — INFO — Explanation complete: CVaR=0.049935, 2359300 model evals
+2026-10-01 14:26:27,434 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0499 > -0.0677)
+2026-10-01 14:26:27,434 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:27,434 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:27,907 — dicex.explainer — INFO — Explanation complete: CVaR=0.050816, 2359300 model evals
+2026-10-01 14:26:27,908 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0508 > -0.0815)
+2026-10-01 14:26:27,908 — experiments.computational_study — INFO —   DiCEx Time: 0.50s ± 0.04s
+2026-10-01 14:26:27,908 — experiments.computational_study — INFO —   Predict Time (avg): 0.362s
+2026-10-01 14:26:27,909 — experiments.computational_study — INFO —   Model Evals: 2441620.0, Avg Time per Eval in batch: 0.148 µs
+2026-10-01 14:26:27,909 — experiments.computational_study — INFO — Evaluating MLP with hidden_layers=100_100_50
+2026-10-01 14:26:28,460 — experiments.computational_study — INFO —   Fit time: 0.55s
+2026-10-01 14:26:28,461 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:28,461 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:29,257 — dicex.explainer — INFO — Explanation complete: CVaR=0.013508, 2358600 model evals
+2026-10-01 14:26:29,259 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0135 > -0.0670)
+2026-10-01 14:26:29,259 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:29,259 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:30,045 — dicex.explainer — INFO — Explanation complete: CVaR=0.013508, 2358600 model evals
+2026-10-01 14:26:30,046 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0135 > -0.0679)
+2026-10-01 14:26:30,046 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:30,046 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:30,836 — dicex.explainer — INFO — Explanation complete: CVaR=0.013508, 2358600 model evals
+2026-10-01 14:26:30,838 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0135 > -0.0680)
+2026-10-01 14:26:30,838 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:30,838 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:31,766 — dicex.explainer — INFO — Explanation complete: CVaR=0.008130, 2771600 model evals
+2026-10-01 14:26:31,767 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0081 > -0.0457)
+2026-10-01 14:26:31,767 — dicex.explainer — INFO — Explaining point: d=8, alpha=0.100, task=regression
+2026-10-01 14:26:31,767 — dicex.optim — INFO — VmfVns started: d=8, alpha=0.100, L=7 neighborhoods, B=150 proposals, n_explore=700, n_test=2100, n_eval=5000, eta=0.0500
+2026-10-01 14:26:32,617 — dicex.explainer — INFO — Explanation complete: CVaR=0.021065, 2497200 model evals
+2026-10-01 14:26:32,619 — dicex.explainer — INFO — Action recommended: Found direction strictly better than inaction (0.0211 > -0.0696)
+2026-10-01 14:26:32,619 — experiments.computational_study — INFO —   DiCEx Time: 0.83s ± 0.05s
+2026-10-01 14:26:32,619 — experiments.computational_study — INFO —   Predict Time (avg): 0.693s
+2026-10-01 14:26:32,619 — experiments.computational_study — INFO —   Model Evals: 2468920.0, Avg Time per Eval in batch: 0.281 µs
+2026-10-01 14:26:32,619 — experiments.computational_study — INFO — Model complexity study complete.
